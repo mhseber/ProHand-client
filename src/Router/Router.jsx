@@ -9,6 +9,12 @@ import Dashboard from "../Pages/Dashboard";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import AuthLayout from "../Layout/AuthLayout";
+import AllService from "../Pages/DashbordRouter/AllService";
+import SingleService from "../Pages/DashbordRouter/SingleService";
+import AddAService from "../Pages/DashbordRouter/AddAService";
+import ManageService from "../Pages/DashbordRouter/ManageService";
+import BookedService from "../Pages/DashbordRouter/BookedService";
+import ServiceToDo from "../Pages/DashbordRouter/ServiceToDo";
 
 const router = createBrowserRouter([
     {
@@ -41,7 +47,31 @@ const router = createBrowserRouter([
                         element: <Register></Register>
                     }
                 ]
-            }
+            },
+            {
+                path: 'allService',
+                element: <AllService></AllService>
+            },
+            {
+                path: 'singleService',
+                element: <SingleService></SingleService>
+            },
+            {
+                path: 'AddAService',
+                element: <AddAService></AddAService>
+            },
+            {
+                path: 'ManageService',
+                element: <ManageService></ManageService>
+            },
+            {
+                path: 'BookedService',
+                element: <BookedService></BookedService>
+            },
+            {
+                path: 'ServiceToDo',
+                element: <ServiceToDo></ServiceToDo>
+            },
         ]
     },
 ]);

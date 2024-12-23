@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../assets/logo.png"
-
+import { LuLogIn } from "react-icons/lu";
 const Navbar = () => {
 
     return (
@@ -66,7 +66,9 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     <Link to="/auth/login">
-                        <a className="btn">Login</a>
+                        <a className="btn  bg-gradient-to-r from-gray-500 to-gray-800 font-semibold text-white">
+                            <LuLogIn />
+                            Login</a>
                     </Link>
                 </div>
             </div>

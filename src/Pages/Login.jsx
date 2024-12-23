@@ -1,10 +1,11 @@
 import Lottie from "lottie-react";
 import { Link } from "react-router-dom";
 import loginLottie from "../assets/Lottie/lottie/login.json"
+import { FcGoogle } from "react-icons/fc";
 
 const Login = () => {
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-100">
+        <div className="lg:flex pl-4 pt-3 justify-center items-center min-h-screen bg-gray-100">
             <div className="bg-white shadow-xl shadow-black rounded-lg p-6 w-full max-w-md">
                 <h1 className="text-2xl font-bold text-center mb-6 text-black">User Login</h1>
                 <form>
@@ -37,17 +38,6 @@ const Login = () => {
                             required
                         />
                     </div>
-
-                    {/* Forget Password Link */}
-                    <div className="mb-6 text-right">
-                        <a
-                            href="/auth/register"
-                            className="text-sm text-black hover:underline"
-                        >
-                            Forgat Password?
-                        </a>
-                    </div>
-
                     {/* Login Button */}
                     <button
                         type="submit"
@@ -56,12 +46,17 @@ const Login = () => {
                         Login
                     </button>
                 </form>
+                <button className="w-full mt-4 btn   text-black font-bold text-xl ">
+                    <FcGoogle />
+                    Google</button>
+
                 <p className="text-center  font-bold pt-5  ">
                     You Have no Account ?
                     <Link to="/auth/register"><span className="text-black pl-5">Register</span></Link>
                 </p>
+
             </div>
-            <div className="text-center lg:text-left w-96 pl-4">
+            <div className=" w-80 pl-8 pt-4">
                 <Lottie animationData={loginLottie}></Lottie>
             </div>
         </div>

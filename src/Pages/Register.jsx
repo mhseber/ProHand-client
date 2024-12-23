@@ -1,10 +1,11 @@
 import Lottie from "lottie-react";
 import { Link } from "react-router-dom";
 import lottieRegister from "../assets/Lottie/lottie/Register.json"
+import { FcGoogle } from "react-icons/fc";
 
 const Register = () => {
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-100">
+        <div className="lg:flex pl-4 pt-3 justify-center items-center min-h-screen bg-gray-100">
             <div className="bg-white shadow-xl shadow-black rounded-lg p-6 w-full max-w-md">
                 <h1 className="text-2xl font-bold text-center mb-6 text-black">User Register</h1>
                 <form>
@@ -65,17 +66,6 @@ const Register = () => {
                             required
                         />
                     </div>
-
-                    {/* Forget Password Link */}
-                    <div className="mb-6 text-right">
-                        <a
-                            href="/auth/register"
-                            className="text-sm text-black hover:underline"
-                        >
-                            Forgat Password?
-                        </a>
-                    </div>
-
                     {/* Login Button */}
                     <button
                         type="submit"
@@ -84,12 +74,15 @@ const Register = () => {
                         Register
                     </button>
                 </form>
+                <button className="w-full mt-4 btn   text-black font-bold text-xl ">
+                    <FcGoogle />
+                    Google</button>
                 <p className="text-center font-bold pt-5 ">
                     All ready Have An Account ?
                     <Link to="/auth/login"><span className="text-black pl-5">Login</span></Link>
                 </p>
             </div>
-            <div className="text-center lg:text-left w-96">
+            <div className="w-96">
                 <Lottie animationData={lottieRegister}></Lottie>
             </div>
         </div>

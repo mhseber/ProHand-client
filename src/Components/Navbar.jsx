@@ -1,7 +1,22 @@
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../assets/logo.png"
 import { LuLogIn } from "react-icons/lu";
+import { CiLogout } from "react-icons/ci";
+import { useContext } from "react";
+import AuthContext from "../Context/AuthContext/AuthContext";
 const Navbar = () => {
+
+    const { user, signOutUser } = useContext(AuthContext);
+
+    const handleSignOut = () => {
+        signOutUser()
+            .then(() => {
+                console.log('Successful Sign Out')
+            })
+            .catch(error => {
+                console.log('Failed to Sign Out')
+            })
+    };
 
     return (
         <nav className="bg-white shadow-md sticky top-0 z-50" >
@@ -65,11 +80,21 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to="/auth/login">
-                        <a className="btn  bg-gradient-to-r from-gray-500 to-gray-800 font-semibold text-white">
-                            <LuLogIn />
-                            Login</a>
-                    </Link>
+                    {
+                        user ? <>
+                            <button onClick={handleSignOut}
+                                className="btn bg-gradient-to-r from-gray-500 to-gray-800 font-semibold text-white ">
+                                <CiLogout />
+                                Log Out</button>
+                        </> : <>
+                            <Link to="/auth/login">
+                                <a className="btn  bg-gradient-to-r from-gray-500 to-gray-800 font-semibold text-white ">
+                                    <LuLogIn />
+                                    Log In</a>
+                            </Link>
+                        </>
+                    }
+
                 </div>
             </div>
         </nav>

@@ -2,13 +2,31 @@ import Lottie from "lottie-react";
 import { Link } from "react-router-dom";
 import loginLottie from "../assets/Lottie/lottie/login.json"
 import { FcGoogle } from "react-icons/fc";
+import { useContext } from "react";
+import AuthContext from "../Context/AuthContext/AuthContext";
 
 const Login = () => {
+    const { signInUser } = useContext(AuthContext)
+    const handleSignIn = e => {
+        e.preventDefault();
+        const form = e.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log(email, password);
+
+        signInUser(email, password)
+            .then(result => {
+                console.log('sign InUser', result.user);
+            })
+            .catch(error => {
+                console.log(error);
+            })
+    };
     return (
         <div className="lg:flex pl-4 pt-3 justify-center items-center min-h-screen bg-gray-100">
             <div className="bg-white shadow-xl shadow-black rounded-lg p-6 w-full max-w-md">
-                <h1 className="text-2xl font-bold text-center mb-6 text-black">User Login</h1>
-                <form>
+                <h1 className="text-2xl font-bold text-center mb-6 text-black">User SignIn</h1>
+                <form onSubmit={handleSignIn}>
                     {/* Email Field */}
                     <div className="mb-4">
                         <label htmlFor="email" className="block text-gray-700 font-medium mb-2">

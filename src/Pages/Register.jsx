@@ -2,13 +2,36 @@ import Lottie from "lottie-react";
 import { Link } from "react-router-dom";
 import lottieRegister from "../assets/Lottie/lottie/Register.json"
 import { FcGoogle } from "react-icons/fc";
+import { useContext } from "react";
+import AuthContext from "../Context/AuthContext/AuthContext";
+
 
 const Register = () => {
+    const { createUser } = useContext(AuthContext);
+    const handleRegister = e => {
+        e.preventDefault();
+        const form = e.target;
+        const name = form.name.value;
+        const email = form.email.value;
+        const password = form.password.value;
+        const photo = form.photo.value;
+        console.log(name, email, password, photo,);
+
+        //password validation:
+        // show password validation error
+        createUser(email, password)
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.log(error.massage)
+            });
+    };
     return (
         <div className="lg:flex pl-4 pt-3 justify-center items-center min-h-screen bg-gray-100">
             <div className="bg-white shadow-xl shadow-black rounded-lg p-6 w-full max-w-md">
                 <h1 className="text-2xl font-bold text-center mb-6 text-black">User Register</h1>
-                <form>
+                <form onSubmit={handleRegister}>
                     {/* name */}
                     <div className="mb-4">
                         <label htmlFor="name" className="block text-gray-700 font-medium mb-2">

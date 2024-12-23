@@ -1,6 +1,6 @@
 import Logo from "../assets/logo.png"
-import { FaFacebook } from "react-icons/fa6";
-import { FaLinkedin } from "react-icons/fa6";
+import facebook from "../assets/facebook.png"
+import linkedin from "../assets/linkedin.png"
 const Footer = () => {
     return (
         <div>
@@ -33,18 +33,17 @@ const Footer = () => {
                 </aside>
                 <nav className="md:place-self-center md:justify-self-end">
                     <div className="grid grid-flow-col gap-4 text-3xl text-white">
-                        <FaFacebook />
-                        <FaLinkedin />
+                        <img src={facebook} alt="" />
+                        <img src={linkedin} alt="" />
                     </div>
                     {/* Copyright Information */}
-                    <div className="mt-4 md:mt-0  md:text-right text-sm text-gray-500 pt-4">
-                        &copy; {new Date().getFullYear()} YourWebsiteName. All rights
+                    <div className="mt-4 md:mt-0  md:text-right text-sm text-gray-500 pt-4  ">
+                        &copy; {new Date().getFullYear()} ProHand. All rights
                         reserved.
                     </div>
                 </nav>
 
             </footer>
-
         </div>
     );
 };

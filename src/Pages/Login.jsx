@@ -6,7 +6,8 @@ import { useContext } from "react";
 import AuthContext from "../Context/AuthContext/AuthContext";
 
 const Login = () => {
-    const { signInUser } = useContext(AuthContext)
+    const { signInUser, signInWithGoogle } = useContext(AuthContext)
+
     const handleSignIn = e => {
         e.preventDefault();
         const form = e.target;
@@ -21,6 +22,16 @@ const Login = () => {
             .catch(error => {
                 console.log(error);
             })
+    };
+
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then((result) => {
+                console.log("Google sign-in success:", result.user);
+            })
+            .catch((error) => {
+                console.error("Google sign-in error:", error);
+            });
     };
     return (
         <div className="lg:flex pl-4 pt-3 justify-center items-center min-h-screen bg-gray-100">
@@ -64,9 +75,11 @@ const Login = () => {
                         Login
                     </button>
                 </form>
-                <button className="w-full mt-4 btn   text-black font-bold text-xl ">
+                <button
+                    onClick={handleGoogleSignIn}
+                    className="w-full mt-4 btn   text-black font-bold text-xl ">
                     <FcGoogle />
-                    Google</button>
+                    Sign In With Google</button>
 
                 <p className="text-center  font-bold pt-5  ">
                     You Have no Account ?

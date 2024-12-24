@@ -7,7 +7,8 @@ import AuthContext from "../Context/AuthContext/AuthContext";
 
 
 const Register = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, signInWithGoogle } = useContext(AuthContext);
+
     const handleRegister = e => {
         e.preventDefault();
         const form = e.target;
@@ -25,6 +26,16 @@ const Register = () => {
             })
             .catch(error => {
                 console.log(error.massage)
+            });
+    };
+
+    const handleGoogleSignIn = () => {
+        signInWithGoogle()
+            .then((result) => {
+                console.log("Google sign-in success:", result.user);
+            })
+            .catch((error) => {
+                console.error("Google sign-in error:", error);
             });
     };
     return (
@@ -97,9 +108,11 @@ const Register = () => {
                         Register
                     </button>
                 </form>
-                <button className="w-full mt-4 btn   text-black font-bold text-xl ">
+                <button
+                    onClick={handleGoogleSignIn}
+                    className="w-full mt-4 btn   text-black font-bold text-xl ">
                     <FcGoogle />
-                    Google</button>
+                    Sign In With Google</button>
                 <p className="text-center font-bold pt-5 ">
                     All ready Have An Account ?
                     <Link to="/auth/login"><span className="text-black pl-5">Login</span></Link>

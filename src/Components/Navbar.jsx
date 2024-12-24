@@ -86,7 +86,7 @@ const Navbar = () => {
                     {/* dark+light */}
                     <button
                         onClick={toggleTheme}
-                        className="bg-gray-800 text-white px-2 md:px-4 py-2 rounded hover:bg-gray-700 border border-yellow-700"
+                        className="bg-gray-800 text-white px-2 md:px-4 py-2 mr-4 rounded-full hover:bg-gray-700 border border-yellow-700"
                     >
                         {theme === "dark" ? "Light Mode" : "Dark Mode"}
                     </button>

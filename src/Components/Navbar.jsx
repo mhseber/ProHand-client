@@ -8,8 +8,7 @@ import { useContext } from "react";
 import AuthContext from "../Context/AuthContext/AuthContext";
 const Navbar = () => {
 
-    const { user, signOutUser } = useContext(AuthContext);
-    // const {  toggleTheme, theme } = useServiceContext();
+    const { user, signOutUser, toggleTheme, theme } = useContext(AuthContext);
 
     const handleSignOut = () => {
         signOutUser()
@@ -20,6 +19,7 @@ const Navbar = () => {
                 console.log('Failed to Sign Out')
             })
     };
+
 
     return (
         <nav className="bg-white shadow-md sticky top-0 z-50" >
@@ -84,12 +84,12 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end">
                     {/* dark+light */}
-                    {/* <button
+                    <button
                         onClick={toggleTheme}
                         className="bg-gray-800 text-white px-2 md:px-4 py-2 rounded hover:bg-gray-700 border border-yellow-700"
                     >
                         {theme === "dark" ? "Light Mode" : "Dark Mode"}
-                    </button> */}
+                    </button>
                     {
                         user ? <>
                             <button onClick={handleSignOut}

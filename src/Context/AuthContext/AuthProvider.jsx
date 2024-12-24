@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import AuthContext from "./AuthContext";
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, } from "firebase/auth";
 import auth from "../../Firebase/Firebase.init";
+import AOS from "aos";
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
@@ -32,13 +33,35 @@ const AuthProvider = ({ children }) => {
             unsubscribe();
         }
     }, []);
+    //Authenticating with google
 
+    //theme change 
+    const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
+
+    useEffect(() => {
+        AOS.refreshHard();
+        if (theme === "dark") {
+            document.documentElement.classList.add("dark");
+        } else {
+            document.documentElement.classList.remove("dark")
+        }
+        setTimeout(() => {
+            AOS.refresh(); // re-apply AOS  triggers
+        }, 100)
+        localStorage.setItem("theme", theme)
+    }, [theme]);
+
+    const toggleTheme = () => {
+        setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+    };
     const authInfo = {
         user,
         loading,
         createUser,
         signInUser,
-        signOutUser
+        signOutUser,
+        toggleTheme,
+        theme
     }
     return (
         <AuthContext.Provider value={authInfo}>

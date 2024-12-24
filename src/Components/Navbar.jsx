@@ -2,11 +2,14 @@ import { Link, NavLink } from "react-router-dom";
 import Logo from "../assets/logo.png"
 import { LuLogIn } from "react-icons/lu";
 import { CiLogout } from "react-icons/ci";
+import { FaHome } from "react-icons/fa";
+import { MdManageAccounts } from "react-icons/md";
 import { useContext } from "react";
 import AuthContext from "../Context/AuthContext/AuthContext";
 const Navbar = () => {
 
     const { user, signOutUser } = useContext(AuthContext);
+    // const {  toggleTheme, theme } = useServiceContext();
 
     const handleSignOut = () => {
         signOutUser()
@@ -62,8 +65,8 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 gap-6">
-                        <li> <NavLink to="/">Home</NavLink></li>
-                        <li><NavLink to="services">Services</NavLink></li>
+                        <li> <NavLink to="/"> <FaHome />Home</NavLink></li>
+                        <li><NavLink to="services"> <MdManageAccounts />Services</NavLink></li>
                         <li>
                             <details>
                                 <summary><NavLink to="dashboard">Dashboard</NavLink></summary>
@@ -80,6 +83,13 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
+                    {/* dark+light */}
+                    {/* <button
+                        onClick={toggleTheme}
+                        className="bg-gray-800 text-white px-2 md:px-4 py-2 rounded hover:bg-gray-700 border border-yellow-700"
+                    >
+                        {theme === "dark" ? "Light Mode" : "Dark Mode"}
+                    </button> */}
                     {
                         user ? <>
                             <button onClick={handleSignOut}

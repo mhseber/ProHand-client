@@ -15,6 +15,7 @@ import AddAService from "../Pages/DashboardRouter/AddAService";
 import ManageService from "../Pages/DashboardRouter/ManageService";
 import BookedService from "../Pages/DashboardRouter/BookedService";
 import ServiceToDo from "../Pages/DashboardRouter/ServiceToDo";
+import ViewDetails from "../Pages/ViewDetails";
 
 const router = createBrowserRouter([
     {
@@ -72,6 +73,10 @@ const router = createBrowserRouter([
                 path: 'ServiceToDo',
                 element: <ServiceToDo></ServiceToDo>
             },
+            {
+                path: 'viewDetails',
+                element: <ViewDetails></ViewDetails>
+            }
         ]
     },
 ]);

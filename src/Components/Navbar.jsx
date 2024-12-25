@@ -69,7 +69,7 @@ const Navbar = () => {
                         <li><NavLink to="services"> <MdManageAccounts />Services</NavLink></li>
                         <li>
                             <details>
-                                <summary><NavLink to="dashboard">Dashboard</NavLink></summary>
+                                <summary>Dashboard</summary>
                                 <ul className="p-2">
                                     <li><Link to="allService">All Service</Link></li>
                                     <li><Link to="singleService">Single Service</Link></li>

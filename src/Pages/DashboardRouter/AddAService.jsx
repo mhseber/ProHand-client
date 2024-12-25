@@ -2,6 +2,14 @@ import { Helmet } from "react-helmet";
 
 
 const AddAService = () => {
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        // const imageUrl = e.target.imageUrl.value;
+        // const serviceName = e.target.serviceName.value;
+        // const price = e.target.price.value;
+        // const serviceArea = e.target.serviceArea.value;
+        // const description = e.target.description.value;
+    };
     return (
         <div>
             <div className="bg-slate-300 min-h-screen dark:bg-gray-900">
@@ -34,7 +42,7 @@ const AddAService = () => {
                         <h2 className="text-2xl font-bold text-center text-gray-700 mb-6 dark:text-gray-200">
                             Service Information
                         </h2>
-                        <form className="space-y-4">
+                        <form onSubmit={handleSubmit} className="space-y-4">
                             {/* Image URL */}
                             <div>
                                 <label

@@ -22,8 +22,8 @@ const Navbar = () => {
 
 
     return (
-        <nav className="bg-white shadow-md sticky top-0 z-50" >
-            <div className="navbar p-10">
+        <nav className="bg-gray-800 shadow-md sticky top-0 z-50" >
+            <div className="navbar p-6">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -64,13 +64,13 @@ const Navbar = () => {
                     <a className=" text-3xl font-extrabold text-orange-600 pl-5"><i>ProHand</i></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 gap-6">
-                        <li> <NavLink to="/"> <FaHome />Home</NavLink></li>
-                        <li><NavLink to="services"> <MdManageAccounts />Services</NavLink></li>
+                    <ul className="menu menu-horizontal px-1 gap-6 ">
+                        <li className="text-gray-300"> <NavLink to="/"> <FaHome />Home</NavLink></li>
+                        <li className="text-gray-300"><NavLink to="services"> <MdManageAccounts />Services</NavLink></li>
                         <li>
                             <details>
-                                <summary>Dashboard</summary>
-                                <ul className="p-2">
+                                <summary className="text-gray-300">Dashboard</summary>
+                                <ul className="p-2 w-40">
                                     <li><Link to="addService">Add Service</Link></li>
                                     <li><Link to="allService">All Service</Link></li>
                                     <li><Link to="ManageService">Manage Service</Link></li>
@@ -85,7 +85,7 @@ const Navbar = () => {
                     {/* dark+light */}
                     <button
                         onClick={toggleTheme}
-                        className="bg-gray-800 text-white px-2 md:px-4 py-2 mr-4 rounded-full hover:bg-gray-700 border border-yellow-700"
+                        className=" hidden lg:block bg-gray-800 text-white px-2 md:px-4 py-2 mr-4 rounded-full hover:bg-gray-700 border border-yellow-700"
                     >
                         {theme === "dark" ? "Light Mode" : "Dark Mode"}
                     </button>

@@ -19,9 +19,8 @@ Live URL:<a href="https://prohand-f1b91.web.app">https://prohand-f1b91.web.app</
 <li>User can login and signin </li>
 <li>User can see all the services without login.</li>
 <li>User can see his booked services with login.</li>
-<li>responsive for mobile, tablet and desktop views</li>
-<li></li>
-<li></li>
+<li>responsive for mobile, tablet and desktop views.</li>
+<li>Experience blazing-fast load times and top-tier security to ensure your data stays safe.</li>
 </ul>
 
 <h2>

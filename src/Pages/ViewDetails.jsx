@@ -6,6 +6,7 @@ import me from "../assets/Me.png"
 import { FaLocationDot } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { LuLogIn } from "react-icons/lu";
+import { Helmet } from "react-helmet";
 
 const ViewDetails = () => {
     useEffect(() => {
@@ -15,6 +16,9 @@ const ViewDetails = () => {
 
     return (
         <div className="bg-gray-100 dark:bg-gray-900 min-h-screen p-8">
+            <Helmet>
+                <title>Details || ProHand</title>
+            </Helmet>
             <header className="text-center mb-12">
                 <h1 className="text-5xl font-extrabold text-orange-700">
                     Services Details

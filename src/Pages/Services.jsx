@@ -2,6 +2,7 @@ import serverBg from "../assets/services.webp"
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 const Services = () => {
     // Initialize AOS
     useEffect(() => {
@@ -59,6 +60,9 @@ const Services = () => {
     ];
     return (
         <div>
+            <Helmet>
+                <title>Services || ProHand</title>
+            </Helmet>
             <div
                 className="hero "
                 style={{

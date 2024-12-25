@@ -71,9 +71,8 @@ const Navbar = () => {
                             <details>
                                 <summary>Dashboard</summary>
                                 <ul className="p-2">
+                                    <li><Link to="addService">Add Service</Link></li>
                                     <li><Link to="allService">All Service</Link></li>
-                                    <li><Link to="singleService">Single Service</Link></li>
-                                    <li><Link to="AddAService">Add A Service</Link></li>
                                     <li><Link to="ManageService">Manage Service</Link></li>
                                     <li><Link to="BookedService">Booked-Service</Link></li>
                                     <li><Link to="ServiceToDo">Service-To-Do</Link></li>

@@ -2,12 +2,16 @@ import BookedServices from "../../assets/BookedServices.jpg"
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 const BookedService = () => {
     useEffect(() => {
         AOS.init({ duration: 1000 });
     }, []);
     return (
         <div>
+            <Helmet>
+                <title>BookedService || ProHand</title>
+            </Helmet>
             <div
                 className="hero "
                 style={{

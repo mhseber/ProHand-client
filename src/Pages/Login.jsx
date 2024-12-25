@@ -5,6 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 import { useContext } from "react";
 import AuthContext from "../Context/AuthContext/AuthContext";
 
+
 const Login = () => {
     const { signInUser, signInWithGoogle } = useContext(AuthContext)
 
@@ -34,6 +35,7 @@ const Login = () => {
             });
     };
     return (
+
         <div className="lg:flex pl-4 pt-3 justify-center items-center min-h-screen bg-gray-100">
             <div className="bg-white shadow-xl shadow-black rounded-lg p-6 w-full max-w-md">
                 <h1 className="text-2xl font-bold text-center mb-6 text-black">User SignIn</h1>

@@ -1,13 +1,16 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-
+import { Helmet } from "react-helmet";
 const ManageService = () => {
     useEffect(() => {
         AOS.init({ duration: 1000 });
     }, []);
     return (
         <div>
+            <Helmet>
+                <title>ManageService || ProHand</title>
+            </Helmet>
             <div
                 className="hero bg-orange-500 ">
                 <div className="hero-overlay bg-opacity-60"></div>

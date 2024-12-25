@@ -38,7 +38,7 @@ const Services = () => {
             description:
                 "Grow your business with tailored marketing plans.",
             imgSrc:
-                "https://thumbs.dreamstime.com/b/digital-marketing-media-website-ad-email-social-network-seo-digital-marketing-media-website-ad-email-social-network-seo-video-124276305.jpg",
+                "https://media.istockphoto.com/id/1936789233/photo/human-use-phone-with-digital-online-marketing-commerce-sale-website-advertising-promotion-of.jpg?s=612x612&w=0&k=20&c=jpXjddGQ_gLe1sv7x8f9Qdg_mmVPU3olye-gjwYR2Nk=",
         },
         {
 

@@ -12,7 +12,7 @@ const PopularServices = () => {
     }, []);
 
     useEffect(() => {
-        fetch('http://localhost:5000/pro')
+        fetch('https://pro-hand-server.vercel.app/pro')
             .then(res => res.json())
             .then(data => setPro(data))
     }, [])

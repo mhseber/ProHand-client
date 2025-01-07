@@ -8,6 +8,9 @@ const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
+
+
+
     // Google sign-in
     const googleProvider = new GoogleAuthProvider();
     const signInWithGoogle = () => {

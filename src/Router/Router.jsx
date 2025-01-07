@@ -15,6 +15,7 @@ import ManageService from "../Pages/DashboardRouter/ManageService";
 import BookedService from "../Pages/DashboardRouter/BookedService";
 import ServiceToDo from "../Pages/DashboardRouter/ServiceToDo";
 import ViewDetails from "../Pages/ViewDetails";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -55,7 +56,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'addService',
-                element: <AddAService></AddAService>
+                element: <PrivateRoute><AddAService></AddAService></PrivateRoute>
             },
             {
                 path: 'ManageService',

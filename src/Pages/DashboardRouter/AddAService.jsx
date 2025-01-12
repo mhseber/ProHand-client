@@ -1,9 +1,8 @@
 import { Helmet } from "react-helmet";
 
-const image_hosting_key = import.meta.env.VITE_IMAGE_KEY;
-const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
-const AddAService = () => {
 
+
+const AddAService = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -15,11 +14,9 @@ const AddAService = () => {
         console.log(imageUrl, serviceName, price, serviceArea, description);
     };
 
-    const onSubmit = (data) => {
-        console.log(data)
-        //image upload to imgbb
 
-    }
+
+
     return (
         <div>
             <div className="bg-slate-300 min-h-screen dark:bg-gray-900">
@@ -52,7 +49,7 @@ const AddAService = () => {
                         <h2 className="text-2xl font-bold text-center text-gray-700 mb-6 dark:text-gray-200">
                             Service Information
                         </h2>
-                        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+                        <form onSubmit={handleSubmit} className="space-y-4">
                             {/* Image URL */}
                             <div>
                                 <label

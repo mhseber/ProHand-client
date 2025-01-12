@@ -50,6 +50,7 @@ const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         AOS.refreshHard();
+
         if (theme === "dark") {
             document.documentElement.classList.add("dark");
         } else {
@@ -60,10 +61,12 @@ const AuthProvider = ({ children }) => {
         }, 100)
         localStorage.setItem("theme", theme)
     }, [theme]);
+    console.log("Navbar theme:", theme);
 
     const toggleTheme = () => {
         setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
     };
+
     const authInfo = {
         user,
         loading,

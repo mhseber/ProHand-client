@@ -10,7 +10,7 @@ const PCard = ({ pros }) => {
         Aos.init({ duration: 1000, once: true })
     }, []);
     return (
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-7xl mx-auto bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white">
             <div
                 data-aos="fade-up"
                 data-aos-delay="100"

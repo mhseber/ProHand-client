@@ -22,7 +22,7 @@ const Navbar = () => {
 
 
     return (
-        <nav className="bg-gray-800 shadow-md sticky top-0 z-50" >
+        <nav className="bg-gray-800  dark:bg-gray-900 shadow-md sticky top-0 z-50" >
             <div className="navbar p-6">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -84,7 +84,7 @@ const Navbar = () => {
                     {/* dark+light */}
                     <button
                         onClick={toggleTheme}
-                        className=" hidden lg:block bg-gray-800 text-white px-2 md:px-4 py-2 mr-4 rounded-full hover:bg-gray-700 border border-yellow-700"
+                        className=" hidden lg:block bg-gray-800  dark:bg-gray-600 text-white px-4 py-2 mr-4 rounded-full hover:bg-gray-700 border border-yellow-700"
                     >
                         {theme === "dark" ? "Light Mode" : "Dark Mode"}
                     </button>

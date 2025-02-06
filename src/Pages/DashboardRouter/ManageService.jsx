@@ -14,7 +14,7 @@ const ManageService = () => {
             <div
                 className="hero bg-orange-500 ">
                 <div className="hero-overlay bg-opacity-60"></div>
-                <div className="hero-content text-neutral-content text-center">
+                <div className="hero-content text-neutral-content text-center ">
                     <div className="max-w-md pt-5">
                         <h1 data-aos="slide-left" className="mb-5 text-5xl font-bold">Manage Your Services</h1>
                         <p data-aos="slide-left" className="mb-5">
@@ -24,9 +24,9 @@ const ManageService = () => {
                     </div>
                 </div>
             </div>
-            <div className="hero bg-base-200 min-h-screen">
+            <div className="hero  min-h-screen bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white">
                 <div className="hero-content text-center">
-                    <div className="max-w-md">
+                    <div className="max-w-md ">
                         <h1 data-aos="fade-up" className="text-5xl font-bold">No services found.</h1>
                         <p data-aos="fade-up" className="py-6">
                             It looks like you haven`t added any services yet.

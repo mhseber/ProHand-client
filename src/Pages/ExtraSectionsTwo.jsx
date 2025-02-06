@@ -10,7 +10,7 @@ const ExtraSectionsTwo = () => {
         Aos.init({ duration: 1000, once: true })
     }, []);
     return (
-        <div className=" bg-base-200 pt-10 pb-10 ">
+        <div className=" bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white pt-10 pb-10 ">
             <div className="hero-content text-center">
                 <div className="max-w-md">
                     <h1 data-aos="slide-right" className="text-xl text-orange-600 font-bold"> Work Gallery</h1>

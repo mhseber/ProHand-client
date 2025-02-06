@@ -25,7 +25,7 @@ const BookedService = () => {
                 </div>
             </div>
             <h1 className="text-black text-2xl font-bold text-center pt-5 pb-10">Your Booked Services</h1>
-            <div className="hero min-h-screen">
+            <div className="hero min-h-screen bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white">
                 <div className="hero-content text-center">
                     <div className="max-w-md">
                         <h1 data-aos="fade-up" className="text-5xl font-bold">No services found.</h1>

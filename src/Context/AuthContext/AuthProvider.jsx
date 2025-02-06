@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import AuthContext from "./AuthContext";
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import auth from "../../Firebase/Firebase.init";
-import AOS from "aos";
+
 
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
@@ -49,23 +49,36 @@ const AuthProvider = ({ children }) => {
     const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
 
     useEffect(() => {
-        AOS.refreshHard();
-
         if (theme === "dark") {
             document.documentElement.classList.add("dark");
         } else {
-            document.documentElement.classList.remove("dark")
+            document.documentElement.classList.remove("dark");
         }
-        setTimeout(() => {
-            AOS.refresh(); // re-apply AOS  triggers
-        }, 100)
-        localStorage.setItem("theme", theme)
     }, [theme]);
-    console.log("Navbar theme:", theme);
 
     const toggleTheme = () => {
-        setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+        setTheme((prevTheme) => {
+            const newTheme = prevTheme === "light" ? "dark" : "light";
+            localStorage.setItem("theme", newTheme);
+            if (newTheme === "dark") {
+                document.documentElement.classList.add("dark");
+            } else {
+                document.documentElement.classList.remove("dark");
+            }
+
+            return newTheme;
+        });
     };
+    useEffect(() => {
+        const savedTheme = localStorage.getItem("theme") || "dark"; // Default: Dark mode
+        setTheme(savedTheme);
+
+        if (savedTheme === "dark") {
+            document.documentElement.classList.add("dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+        }
+    }, []);
 
     const authInfo = {
         user,

@@ -25,10 +25,10 @@ const ServiceToDo = () => {
                     Track, manage, and grow your bookings effortlessly.
                 </p>
 
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black opacity-50"></div>
+
             </div>
 
-            <h1 data-aos="fade-up" className="text-4xl font-extrabold text-center mb-10 mt-8 py-12 text-gray-800 ">
+            <h1 data-aos="fade-up" className="text-4xl font-extrabold text-center mb-10 mt-8 py-12  bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white">
                 Manage Your Provided Services Below
             </h1>
         </div>

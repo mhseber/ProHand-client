@@ -11,7 +11,7 @@ const ExtraSectionsOne = () => {
         Aos.init({ duration: 1000, once: true })
     }, []);
     return (
-        <div className="hero bg-base-200 min-h-screen">
+        <div className="hero  min-h-screen bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <img
                     data-aos="fade-up"

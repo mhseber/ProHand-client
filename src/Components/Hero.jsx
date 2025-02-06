@@ -8,7 +8,7 @@ import four from "../../src/assets/4.jpg"
 const Hero = () => {
     return (
         <div
-            className="hero min-h-screen"
+            className="hero min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white"
             style={{
                 backgroundImage: `url(${banner})`,
             }}>

@@ -17,7 +17,7 @@ const PopularServices = () => {
             .then(data => setPro(data))
     }, [])
     return (
-        <div>
+        <div className="bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-white">
             <div className="text-center pt-20">
                 <h1 data-aos="slide-left" className="text-4xl font-extrabold text-orange-700">Popular Services</h1>
                 <p data-aos="slide-left" className="font-bold text-gray-600 pt-3 pb-4">Check out some of our most popular services.</p>

@@ -16,6 +16,7 @@ import BookedService from "../Pages/DashboardRouter/BookedService";
 import ServiceToDo from "../Pages/DashboardRouter/ServiceToDo";
 import ViewDetails from "../Pages/ViewDetails";
 import PrivateRoute from "./PrivateRoute";
+import BookNow from "../Pages/BookNow";
 
 const router = createBrowserRouter([
     {
@@ -60,11 +61,11 @@ const router = createBrowserRouter([
             },
             {
                 path: 'ManageService',
-                element: <ManageService></ManageService>
+                element: <PrivateRoute><ManageService></ManageService></PrivateRoute>
             },
             {
                 path: 'BookedService',
-                element: <BookedService></BookedService>
+                element: <PrivateRoute><BookedService></BookedService></PrivateRoute>
             },
             {
                 path: 'ServiceToDo',
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
             {
                 path: 'viewDetails',
                 element: <ViewDetails></ViewDetails>
+            },
+            {
+                path: 'bookNow',
+                element: <BookNow></BookNow>
             }
         ]
     },

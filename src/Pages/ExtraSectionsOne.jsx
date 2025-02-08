@@ -23,7 +23,7 @@ const ExtraSectionsOne = () => {
                     <h1 data-aos="slide-left" className="text-5xl font-bold pb-4">It’s Our <span className="text-orange-700">Honour</span>, To <br />
                         Be With <span className="text-orange-700">You</span></h1>
                     <p data-aos="slide-left" className="py-6 text-black">
-                        There are many variations of passages of electronics Services, but the majority have <br /> suffered alteration in some form, by injected humour, or randomised words which don't <br /> look even slightly believable. by injected humour, or randomised words which don't look even
+                        There are many variations of passages of electronics Services, but the majority have <br /> suffered alteration in some form, by injected humour, or randomised words which dont <br /> look even slightly believable. by injected humour, or randomised words which don't look even
                     </p>
                     <div
                         data-aos="fade-up"

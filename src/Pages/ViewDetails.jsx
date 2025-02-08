@@ -4,14 +4,16 @@ import { useEffect } from "react";
 import service from "../assets/banner.jpg"
 import me from "../assets/Me.png"
 import { FaLocationDot } from "react-icons/fa6";
-import { Link } from "react-router-dom";
-import { LuLogIn } from "react-icons/lu";
+import { LuNotebookText } from "react-icons/lu";
 import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
+
 
 const ViewDetails = () => {
     useEffect(() => {
         Aos.init({ duration: 1000, once: true })
     }, []);
+
 
 
     return (
@@ -28,7 +30,6 @@ const ViewDetails = () => {
                 </p>
             </header>
             <div className=" justify-center items-center">
-
                 <div
                     className="w-full mx-auto bg-white rounded-lg shadow-lg overflow-hidden dark:bg-gray-800 "
                     data-aos="fade-up"
@@ -69,15 +70,13 @@ const ViewDetails = () => {
                         </ul>
                     </div>
                     <div className="p-4 bg-gray-50 text-center dark:bg-gray-700">
-                        <Link to="/auth/login">
+                        <Link to="/bookNow">
                             <button
                                 data-aos="fade-up"
                                 className=" btn w-40 bg-gradient-to-r from-gray-500 to-gray-800 font-semibold text-white  py-2 px-4 rounded-xl hover:bg-gray-300 transition">
-
-                                <LuLogIn />Sign Up
+                                <LuNotebookText />Book Now
                             </button>
                         </Link>
-
                     </div>
                 </div>
 

@@ -35,7 +35,7 @@ const ViewDetails = () => {
         >
           <div className="flex gap-3">
             <img data-aos="fade-up" className="w-10" src={me} alt="" />
-            <div className="text-gray-300">
+            <div className="font-semibold text-black dark:text-gray-300">
               <p data-aos="slide-left" className="pt-4">
                 MH SEBER
               </p>
@@ -73,7 +73,7 @@ const ViewDetails = () => {
             </h1>
             <div className="flex gap-3">
               <img data-aos="fade-up" className="w-10" src={me} alt="" />
-              <div className="text-gray-300">
+              <div className="font-semibold text-black dark:text-gray-300">
                 <p data-aos="slide-left">MH SEBER</p>
                 <div className="flex pt-2">
                   <FaLocationDot />
@@ -83,8 +83,10 @@ const ViewDetails = () => {
             </div>
             <ul className="space-y-2 text-left text-gray-700 dark:text-gray-300">
               <div>
-                {" "}
-                <p data-aos="slide-left" className="pt-4 text-gray-300">
+                <p
+                  data-aos="slide-left"
+                  className="pt-4 font-semibold text-black dark:text-gray-300"
+                >
                   Price: $200
                 </p>
               </div>
@@ -94,7 +96,7 @@ const ViewDetails = () => {
             <Link to="/bookNow">
               <button
                 data-aos="fade-up"
-                className="w-40 px-4 py-2 font-semibold text-white transition  btn bg-gradient-to-r from-gray-500 to-gray-800 rounded-xl hover:bg-gray-300"
+                className="w-40 px-4 py-2 font-semibold text-white transition btn bg-gradient-to-r from-gray-500 to-gray-800 rounded-xl hover:bg-gray-300"
               >
                 <LuNotebookText />
                 Book Now

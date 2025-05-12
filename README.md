@@ -1,29 +1,27 @@
-# React + Vite
+# TechAid - Electronic Repair Service Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🌐 Live Site
 
-Currently, two official plugins are available:
+🔗 [View Live Site](https://prohand-f1b91.web.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Welcome to **TechAid**, a platform for managing and offering electronic repair services. This app allows service providers to add new repair services and manage them effectively through a user-friendly interface.
 
-<h2>
-Name: Pro Hand
-</h2>
-<h2>
-Live URL:<a href="https://prohand-f1b91.web.app">https://prohand-f1b91.web.app</a>
-</h2>
+## 🚀 Features
 
-<h1>Features</h1>
-<ul>
-<li>User can login and signin </li>
-<li>User can see all the services without login.</li>
-<li>User can see his booked services with login.</li>
-<li>responsive for mobile, tablet and desktop views.</li>
-<li>Experience blazing-fast load times and top-tier security to ensure your data stays safe.</li>
-</ul>
+- ✅ Add new services with details like image, price, description, and service area.
+- ✅ Manage your services: view existing entries (dynamic list), and plan for updates or deletion.
+- ✅ Responsive UI using TailwindCSS and DaisyUI.
+- ✅ Smooth animations powered by AOS (Animate On Scroll).
+- ✅ Helmet integration for dynamic page titles.
 
-<h2>
-category no: 02
-Category Name:Service sharing Web Application.
-</h2>
+## 🛠️ Tech Stack
+
+- **React.js**
+- **Tailwind CSS**
+- **DaisyUI**
+- **AOS (Animate on Scroll)**
+- **React Helmet**
+- **Firebase (for previous hosting)**
+- **Netlify (current hosting target)**
+
+## 📁 Project Structure

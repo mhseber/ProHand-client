@@ -62,9 +62,6 @@ const Navbar = () => {
                   </summary>
                   <ul className="p-2">
                     <li>
-                      <Link to="addService">Add Service</Link>
-                    </li>
-                    <li>
                       <Link to="allService">All Service</Link>
                     </li>
                     <li>
@@ -82,7 +79,7 @@ const Navbar = () => {
             </ul>
           </div>
           <img className="w-16" src={Logo} alt="logo" />
-          <a className="pl-5 text-3xl font-extrabold text-orange-600 ">
+          <a className="pl-5 text-4xl font-extrabold text-orange-600 ">
             <i>TechAid</i>
           </a>
         </div>
@@ -108,9 +105,6 @@ const Navbar = () => {
                 <summary className="text-gray-300">Dashboard</summary>
                 <ul className="w-40 p-2">
                   <li>
-                    <Link to="addService">Add Service</Link>
-                  </li>
-                  <li>
                     <Link to="allService">All Service</Link>
                   </li>
                   <li>
@@ -127,11 +121,11 @@ const Navbar = () => {
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
+        <div className="flex flex-col-reverse items-end gap-2 mt-2 navbar-end lg:flex-row lg:items-center lg:mt-0">
           {/* dark+light */}
           <button
             onClick={toggleTheme}
-            className="hidden px-4 py-2 mr-4 text-white bg-gray-800 border border-yellow-700 rounded-full  lg:block dark:bg-gray-600 hover:bg-gray-700"
+            className="px-4 py-2 text-white bg-gray-800 border border-yellow-700 rounded-full lg:mr-4 dark:bg-gray-600 hover:bg-gray-700"
           >
             {theme === "dark" ? "Light Mode" : "Dark Mode"}
           </button>
